@@ -1,0 +1,5 @@
+Copy the folder containing the module you want to use into this directory on your system:
+
+c:\Windows\system32\WindowsPowerShell\v1.0\Modules
+
+Then restart powershell for the module to be loaded.
