@@ -51,8 +51,11 @@ Function Select-FileDialog
 $separated = $file2.split("\,.")
 $root_delta_filename = $separated[($separated.count)-2]
 
+$low1 = $file1.ToLower()
+$low2 = $file2.ToLower()
+
 # verify that the two files selected are both .ckl file extensions
-IF($file1.EndsWith(".ckl") -eq $False)
+IF($low1.EndsWith(".ckl") -eq $False)
 {
     Write-Host "The first file selected was not a .ckl file format. Exiting script..."
     Exit
@@ -62,9 +65,9 @@ ELSE
     #Keep going...
 }
 
-IF($file2.EndsWith(".ckl") -eq $False)
+IF($low2.EndsWith(".ckl") -eq $False)
 {
-    Write-Host "The first file selected was not a .ckl file format. Exiting script..."
+    Write-Host "The second file selected was not a .ckl file format. Exiting script..."
     Exit
 }
 ELSE
